@@ -17,7 +17,7 @@ import React, { Component } from 'react'
 
 import useStats from 'stats-hooks'
 
-class Example extends Component {
+const App = () => {
   const {data, values, sorted, sum, min, max, mean, median, sd} = useStats([1, 3, 2]);
 
   // data : [1, 3, 2]
