@@ -13,7 +13,7 @@ const App = () => {
   const sorted = useArr(stats.sorted);
 
   React.useEffect(() => {
-    if (text.match('^([-+]?([0-9]*.[0-9]+|[0-9]+),)*([-+]?([0-9]*.[0-9]+|[0-9]+)){1}$')) {
+    if (text.match(/^([-+]?([0-9]+.[0-9]+|[0-9]*)){1}(,[-+]?([0-9]+.[0-9]+|[0-9]*))*$/)) {
       setData(text.split(',').map((e) => +e));
     }
   }, [text]);
