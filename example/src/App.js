@@ -1,44 +1,27 @@
 import React from 'react';
 import useStats from 'stats-hooks';
 
-const data = [
-  {
-    key: 'a',
-    value: 2,
-  },
-  {
-    key: 'b',
-    value: 3,
-  },
-  {
-    key: 'c',
-    value: 7,
-  },
-  {
-    key: 'd',
-    value: 1,
-  },
-  {
-    key: 'e',
-    value: 5,
-  },
-  {
-    key: 'f',
-    value: 4,
-  },
-];
-
 const useArr = (arr) => {
   return React.useMemo(() => arr.join(','), [arr]);
 };
 
 const App = () => {
-  const stats = useStats(data, 'value');
+  const [text, setText] = React.useState('');
+  const [data, setData] = React.useState([]);
+  const stats = useStats(data);
   const values = useArr(stats.values);
   const sorted = useArr(stats.sorted);
 
+  React.useEffect(() => {
+    if (text.match('^([-+]?([0-9]*.[0-9]+|[0-9]+),)*([-+]?([0-9]*.[0-9]+|[0-9]+)){1}$')) {
+      setData(text.split(',').map((e) => +e));
+    }
+  }, [text]);
+
   return (
     <div>
+      <textarea value={text} onChange={(event) => setText(event.target.value)}>
+      </textarea>
       <div>Values: {values}</div>
       <div>Sorted: {sorted}</div>
       <div>Sum: {stats.sum}</div>
