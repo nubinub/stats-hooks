@@ -15,14 +15,20 @@ npm install --save stats-hooks
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'stats-hooks'
+import useStats from 'stats-hooks'
 
 class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
+  const {data, values, sorted, sum, min, max, mean, median, sd} = useStats([1, 3, 2]);
+
+  // data : [1, 3, 2]
+  // values : [1, 3, 2]
+  // sorted : [1, 2, 3]
+  // sum : 6
+  // min : 1
+  // max : 3
+  // mean : 2
+  // median : 2
+  // sd : 0.816496580927726
 }
 ```
 
