@@ -18,11 +18,12 @@ import React, { Component } from 'react'
 import useStats from 'stats-hooks'
 
 const App = () => {
-  const {data, values, sorted, sum, min, max, mean, median, sd} = useStats([1, 3, 2]);
+  const {data, values, ascending, descending, sum, min, max, mean, median, sd} = useStats([1, 3, 2]);
 
   // data : [1, 3, 2]
   // values : [1, 3, 2]
-  // sorted : [1, 2, 3]
+  // ascending : [1, 2, 3]
+  // descending : [3, 2, 1]
   // sum : 6
   // min : 1
   // max : 3

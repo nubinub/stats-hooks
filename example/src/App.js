@@ -10,7 +10,8 @@ const App = () => {
   const [data, setData] = React.useState([]);
   const stats = useStats(data);
   const values = useArr(stats.values);
-  const sorted = useArr(stats.sorted);
+  const ascending = useArr(stats.ascending);
+  const descending = useArr(stats.descending);
 
   React.useEffect(() => {
     if (text.match(/^([-+]?([0-9]+.[0-9]+|[0-9]*)){1}(,[-+]?([0-9]+.[0-9]+|[0-9]*))*$/)) {
@@ -23,7 +24,8 @@ const App = () => {
       <textarea value={text} onChange={(event) => setText(event.target.value)}>
       </textarea>
       <div>Values: {values}</div>
-      <div>Sorted: {sorted}</div>
+      <div>Ascending: {ascending}</div>
+      <div>Descending: {descending}</div>
       <div>Sum: {stats.sum}</div>
       <div>Mean: {stats.mean}</div>
       <div>Median: {stats.median}</div>
