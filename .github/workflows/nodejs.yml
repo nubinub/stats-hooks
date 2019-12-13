@@ -1,0 +1,25 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [8.x, 10.x, 12.x]
+
+    steps:
+    - name: install
+      run: 
+        npm install -g yarn
+        yarn install
+    - name: test
+      run: yarn test
+    - name: build
+      run: yarn build
+        
+    
+      
