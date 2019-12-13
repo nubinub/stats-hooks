@@ -11,7 +11,7 @@ import useStandardDeviation from './hooks/useStandardDeviation';
 
 export default useStats;
 
-export const exp = {
+export {
   useValues,
   useAscending,
   useDescending,
