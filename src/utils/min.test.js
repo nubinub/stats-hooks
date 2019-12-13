@@ -1,6 +1,6 @@
 import min from "./min";
 
-describe('utils/max', () => {
+describe('utils/min', () => {
   it('should return NaN when undefined', () => {
     expect(min(undefined)).toEqual(NaN);
   });
