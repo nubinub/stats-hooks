@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-const useValues = (data, field) => {
+const useValues = (data = [], field = undefined) => {
   const values = useMemo(() => {
     return field ? data.map((a) => a[field]) : [...data];
   }, [data, field]);
