@@ -13,13 +13,17 @@ jobs:
 
     steps:
     - name: install
-      run: 
-        npm install -g yarn
-        yarn install
-    - name: test
-      run: yarn test
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: install
     - name: build
-      run: yarn build
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: build
+    - name: test
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        cmd: test
         
     
       
