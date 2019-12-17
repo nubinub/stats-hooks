@@ -1,5 +1,5 @@
 import React from 'react';
-import useStats from 'stats-hooks';
+import { useStats, useFrequency } from 'stats-hooks';
 
 const useArr = (arr) => {
   return React.useMemo(() => arr.map(e => JSON.stringify(e)).join(','), [arr]);
@@ -12,6 +12,8 @@ const App = () => {
   const values = useArr(stats.values);
   const ascending = useArr(stats.ascending);
   const descending = useArr(stats.descending);
+  const frequency = useFrequency(data, 10);
+  const frequencyArr = useArr(frequency);
 
   React.useEffect(() => {
     if (text.match(/^([-+]?([0-9]+.[0-9]+|[0-9]*)){1}(,[-+]?([0-9]+.[0-9]+|[0-9]*))*$/)) {
@@ -46,6 +48,7 @@ const App = () => {
         <div>Standard deviation: {stats.sd}</div>
         <div>Min: {stats.min}</div>
         <div>Max: {stats.max}</div>
+        <div>Frequency: {frequencyArr}</div>
       </div>
 
       <div>
