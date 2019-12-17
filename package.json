@@ -57,5 +57,11 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/utils/TestHook.js"
+    ]
+  }
 }
