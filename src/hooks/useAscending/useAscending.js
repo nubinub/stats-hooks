@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-const useAscending = (data, field) => {
+const useAscending = (data = [], field = undefined) => {
   const ascending = useMemo(() => {
     return [...data].sort((a, b) => field ? a[field] - b[field] : a - b);
   }, [data, field]);

@@ -1,6 +1,11 @@
+/**
+ * Returns the median of the given list of number, assuming the numbers are already sorted on ascending order.
+ *
+ * @param {array} sorted
+ */
 const median = (sorted) => {
   let median = NaN;
-  if (sorted.length) {
+  if (sorted && sorted.length) {
     let a = null;
     let b = null;
     if (sorted.length % 2) {
