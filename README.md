@@ -3,6 +3,7 @@
 > Library of react hooks for statistics purpose.
 
 [![NPM](https://img.shields.io/npm/v/stats-hooks.svg)](https://www.npmjs.com/package/stats-hooks) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![GitHub Actions status | nubinub/stats-hooks](https://github.com/nubinub/stats-hooks/workflows/Node%20CI/badge.svg)](https://github.com/nubinub/stats-hooks/actions?workflow=Node+CI)
 
 ## Install
 
