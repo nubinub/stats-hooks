@@ -8,10 +8,10 @@ import useSum from './hooks/useSum';
 import useMin from './hooks/useMin';
 import useMax from './hooks/useMax';
 import useStandardDeviation from './hooks/useStandardDeviation';
-
-export default useStats;
+import useFrequency from './hooks/useFrequency';
 
 export {
+  useStats,
   useValues,
   useAscending,
   useDescending,
@@ -21,4 +21,5 @@ export {
   useMedian,
   useSum,
   useStandardDeviation,
+  useFrequency,
 };
