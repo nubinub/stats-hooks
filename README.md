@@ -17,7 +17,7 @@ npm install --save stats-hooks
 ```jsx
 import React, { Component } from 'react'
 
-import { useStats, useFrequency } from 'stats-hooks'
+import { useStats, useFrequency, useFrenquencyValues } from 'stats-hooks'
 
 const App = () => {
   const {data, values, ascending, descending, sum, min, max, mean, median, sd} = useStats([1, 3, 2]);
@@ -32,8 +32,11 @@ const App = () => {
   // median : 2
   // sd : 0.816496580927726
 
-  const intervals = useFrequency([1, 23, 22], 10);
+  const frequency = useFrequency([1, 23, 22], 10);
   // {lowerBound: 0, upperBound: 10, n: 1}, {lowerBound: 10, upperBound: 20, n: 0}, {lowerBound: 20, upperBound: 30, n: 2}
+
+  const frequencyValues = useFrequencyValues(['a', 'b', 'a']);
+  // {value: 'a', count: 2}, {value: 'b', count: 1}
 }
 ```
 
