@@ -31,19 +31,19 @@ describe('hooks/useFrequencyValues', () => {
 
     expect(frequency).toHaveLength(5);
     expect(frequency).toContainEqual(
-      {value: 'a', count: 2}
+      {value: 'a', n: 2}
     );
     expect(frequency).toContainEqual(
-      {value: 'ab', count: 1}
+      {value: 'ab', n: 1}
     );
     expect(frequency).toContainEqual(
-      {value: 'bcd', count: 1}
+      {value: 'bcd', n: 1}
     );
     expect(frequency).toContainEqual(
-      {value: 'bc', count: 1}
+      {value: 'bc', n: 1}
     );
     expect(frequency).toContainEqual(
-      {value: 'abcd', count: 1}
+      {value: 'abcd', n: 1}
     );
   });
 });
