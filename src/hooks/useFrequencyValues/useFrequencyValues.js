@@ -6,7 +6,7 @@ const useFrequencyValues = (data, field) => {
   return React.useMemo(() => {
     const fv = {};
 
-    values.forEach(value => fv[value]  ? fv[value].count++ : fv[value] = {value, count: 1});
+    values.forEach(value => fv[value]  ? fv[value].n++ : fv[value] = {value, n: 1});
 
     return Object.values(fv);
   }, [values]);

@@ -36,7 +36,7 @@ const App = () => {
   // {lowerBound: 0, upperBound: 10, n: 1}, {lowerBound: 10, upperBound: 20, n: 0}, {lowerBound: 20, upperBound: 30, n: 2}
 
   const frequencyValues = useFrequencyValues(['a', 'b', 'a']);
-  // {value: 'a', count: 2}, {value: 'b', count: 1}
+  // {value: 'a', n: 2}, {value: 'b', n: 1}
 }
 ```
 
