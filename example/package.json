@@ -5,6 +5,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@rmwc/elevation": "^5.7.2",
+    "@rmwc/textfield": "^5.7.2",
+    "@rmwc/top-app-bar": "^5.7.2",
+    "@rmwc/typography": "^5.7.2",
     "prop-types": "^15.6.2",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",

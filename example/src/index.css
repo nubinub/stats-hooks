@@ -1,3 +1,6 @@
+@import '~@material/elevation/dist/mdc.elevation.css';
+@import '~@material/typography/dist/mdc.typography.css';
+
 body {
   margin: 0;
   padding: 0;
