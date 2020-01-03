@@ -9,6 +9,7 @@ import useMin from './hooks/useMin';
 import useMax from './hooks/useMax';
 import useStandardDeviation from './hooks/useStandardDeviation';
 import useFrequency from './hooks/useFrequency';
+import useFrequencyValues from './hooks/useFrequencyValues';
 
 export {
   useStats,
@@ -22,4 +23,5 @@ export {
   useSum,
   useStandardDeviation,
   useFrequency,
+  useFrequencyValues,
 };

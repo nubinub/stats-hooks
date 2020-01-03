@@ -17,7 +17,7 @@ const App = () => {
   const ascending = useArr(stats.ascending);
   const descending = useArr(stats.descending);
   const frequency = useFrequency(data, 10);
-  const frequencyArr = useFrequencyArr(frequency);
+  const frequencyArr = useFrequencyArr(frequency.filter(f => f.n));
 
   React.useEffect(() => {
     if (text && text.match(/^([-+]?([0-9]+.[0-9]+|[0-9]*)){1}(,[-+]?([0-9]+.[0-9]+|[0-9]*))*$/)) {
